@@ -1,0 +1,4 @@
+<h2>Submit Your Review</h2>
+<p>We're excited to announce a new feature - movie reviews!</p>
+
+<%= link "Start your review", to: "#" %>

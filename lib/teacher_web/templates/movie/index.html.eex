@@ -1,0 +1,35 @@
+<h2>Listing movies</h2>
+
+<%= if is_admin?(current_user(@conn)) do %>
+  <%= link "New movie", to: movie_path(@conn, :new) %>
+<% end %>
+
+<%= if flag_enabled?(:movie_reviews, current_user(@conn)) do %>
+  <div class="pull-right">
+  <%= link "Submit a Review", to: movie_path(@conn, :review), class: "btn btn-default btn-xs" %>
+  </div>
+<% end %>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Summary</th>
+      <th>Year</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for movie <- @movies do %>
+    <tr>
+      <td><%= movie.title %></td>
+      <td><%= movie.summary %></td>
+      <td><%= movie.year %></td>
+      <td class="text-right">
+        <%= link "Show", to: movie_path(@conn, :show, movie), class: "btn btn-default btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
