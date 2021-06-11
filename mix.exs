@@ -5,7 +5,7 @@ defmodule Teacher.Mixfile do
     [
       app: :teacher,
       version: "0.0.1",
-      elixir: "~> 1.6",
+      elixir: "~> 1.11",
       elixirc_paths: elixirc_paths(Mix.env),
       compilers: [:phoenix, :gettext] ++ Mix.compilers,
       start_permanent: Mix.env == :prod,
@@ -40,8 +40,8 @@ defmodule Teacher.Mixfile do
       {:phoenix_html, "~> 2.10"},
       {:phoenix_live_reload, "~> 1.0", only: :dev},
       {:gettext, "~> 0.11"},
-      {:comeonin, "~> 4.0"},
-      {:bcrypt_elixir, "~> 1.0"},
+      {:comeonin, "~> 5.0"},
+      {:bcrypt_elixir, "~> 2.0"},
       {:fun_with_flags, "~> 1.0.0"},
       {:fun_with_flags_ui, "~> 0.4.0"},
       {:cowboy, "~> 1.0"}
