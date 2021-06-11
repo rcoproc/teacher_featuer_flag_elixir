@@ -1,5 +1,19 @@
 # Teacher
 
+This was a POC for using feature flags in elixir.
+
+In this small project I used these two libs:
+
+https://github.com/tompave/fun_with_flags
+
+https://github.com/tompave/fun_with_flags_ui
+
+To view the feature-flags dashboard run:
+
+    https://localhost:4000/feature-flags
+
+
+
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
